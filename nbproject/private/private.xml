@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/jdbc.properties</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/src/java/po/Fastfood.java</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/crud/fastfood_crud.html</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/crud/orders_add.html</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/src/java/control/OrdersMultiActionController.java</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/crud/orders_query.html</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/jsp/fastfood.jsp</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/src/java/po/Orders.java</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/welcome.html</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/spring-Datasource.xml</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/jsp/orders.jsp</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/web/WEB-INF/web.xml</file>
+            <file>file:/Users/vincent_mac/NetBeansProjects/SSH_Fastfood訂單管理_Lab/src/java/dao/OrdersDAO.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,86 @@
+<html ng-app="App">
+    <head>
+        <!-- nocache -->
+        <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 1901 11:12:01 GMT">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Fastfood 訂單新增</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+        <script>
+            
+            var shoppingCar = JSON.parse('[]'); // 購物車json資料
+            var App = angular.module('App', []);
+            App.controller('AjaxCtrl', function ($scope, $http, $window) {
+                $scope.load = function () {
+                    $http.get('../fastfood/query.do').then(function (res) {
+                        console.log(res.data);
+                        $scope.fastfoods = res.data;
+                        
+                    });
+                };
+                
+                // 請設計程序
+                
+            });
+        </script>
+    </head>
+    <body style="padding: 15px" ng-controller="AjaxCtrl" ng-init='load()'>
+        <table>
+            <td valign="top" style="padding: 5px" >
+                <form class="pure-form" action="login" method="post" >
+                    <fieldset>
+                        <legend>Fastfood 訂單新增</legend>
+                        <input type="text" placeholder="請輸入訂購人" name="customerName" id="customerName" ng-model="customerName"><p>
+                        <select name="fastfoodId" id="fastfoodId" ng-model="fastfoodId">
+                            <option ng-repeat="fastfood in fastfoods" value="{{fastfood.id}}">{{fastfood.name}}</option>
+                        </select> 請選擇商品<p>
+                        <input type="text" placeholder="請輸入數量" name="amount" id="amount" ng-model="amount"><p>
+                        <button type="button" class="pure-button pure-button-primary" ng-click="add()">新增至購物車</button>
+                        <button type="button" class="pure-button pure-button-primary" ng-click="create()">傳送訂單</button>
+                        
+                    </fieldset>
+                </form>
+
+                <div style="height: 30px" ng-model="result">{{result}}</div>
+            </td>
+            <td valign="top" style="padding: 5px" >
+                <form class="pure-form">
+                    <fieldset>
+                        <legend>
+                            Fastfood 購物車
+                            ：<span ng-model="total">{{total | currency}}</span>
+                        </legend>
+                        <table class="pure-table pure-table-bordered">
+                            <thead>
+                                <tr>
+                                    <th align="center">Image</th>
+                                    <th align="center">Name</th>
+                                    <th align="center">Price</th>
+                                    <th align="center">Amount</th>
+                                    <th align="center">Subtotal</th>
+                                    <th align="center">Delete</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr ng-repeat="orders in orderlist">
+                                    <td><img src="../images/fastfood/{{orders.name}}.png" width="80"></td>
+                                    <td>{{orders.name}}</td>
+                                    <td>{{orders.price|number}}</td>
+                                    <td>{{orders.amount|number}}</td>
+                                    <td>{{orders.subtotal|number}}</td>
+                                    <td><button type="button" class="pure-button pure-button-primary" ng-click="delete(orders)">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                    </fieldset>  
+                </form>
+            </td>
+        </table>
+    </body>
+</html>
